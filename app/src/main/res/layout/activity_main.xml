@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#037276">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            app:tint="@android:color/white"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Hi, Welcome Back, User!" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/totalExpensesContainerMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="#037276"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Expenses (This Month)"
+            android:textSize="12sp"
+            android:textColor="#B2DFDB"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/total_expenses_main_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="R0.00"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Expense Overview"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="#037276" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View by Category"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+
+                <Switch
+                    android:id="@+id/chartModeToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:thumbTint="#037276"
+                    android:trackTint="#59C3C3"
+                    tools:ignore="UseSwitchCompatForToggle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget vs. Spent"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/legendContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center_horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#037276"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="home" />
+
+        <ImageButton
+            android:id="@+id/analyticsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Analytics"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="analytics" />
+
+        <ImageButton
+            android:id="@+id/transactionsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Transactions"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="transactions" />
+
+        <ImageButton
+            android:id="@+id/plansButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Plans"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="plans" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Profile"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tag="profile" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <!-- Header and Balance sections remain the same -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#037276"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Category"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#037276">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Money Spent"
+                android:fontFamily="@font/poppins"
+                android:textSize="12sp"
+                android:textColor="#B2DFDB"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/total_expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R0"
+                android:textSize="20sp"
+                android:textColor="#FF0000"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
+                android:gravity="end" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/food_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_food"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Food"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/transport_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_transport"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Transport"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transport"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/medicine_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_medicine"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Medicine"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/groceries_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_groceries"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Groceries"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Groceries"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/rent_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_rent"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Rent"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/gifts_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_gifts"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Gifts"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gifts"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/savings_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_savings"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Savings"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hobbies"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/entertainment_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_entertainment"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Entertainment"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entertainment"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/more_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_add"
+                    android:scaleType="centerInside"
+                    android:contentDescription="More"
+                    app:tint="#FFFFFF"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Custom"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar remains the same -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#037276"
+        android:orientation="horizontal"
+        android:padding="17dp"
+        android:weightSum="5"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>

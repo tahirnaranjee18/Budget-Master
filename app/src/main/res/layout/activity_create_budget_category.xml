@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008080"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Back"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Budget"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/entertainment_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_entertainment"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Entertainment category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entertainment"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/food_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_food"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Food category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gifts_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_gifts"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Gifts category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gifts"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groceries_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_groceries"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Groceries category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Groceries"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medicine_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_medicine"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Medicine category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transport_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_transport"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Transport category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transport"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rent_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_rent"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Rent category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/savings_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_savings"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Hobbies category icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hobbies"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/add_custom_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#023436"
+            android:text="Add Custom"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"
+            android:paddingStart="32dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="12dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#037276"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

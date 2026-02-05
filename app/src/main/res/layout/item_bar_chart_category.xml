@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="4dp"
+    android:layout_marginEnd="8dp">
+
+    <LinearLayout
+        android:id="@+id/bars_and_amounts_parent_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginBottom="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="1dp">
+
+            <TextView
+                android:id="@+id/tv_category_spent_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R0.00"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toTopOf="@+id/bar_spent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="0dp" />
+
+            <View
+                android:id="@+id/bar_spent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/green_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="@dimen/bar_chart_max_height" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="1dp">
+
+            <TextView
+                android:id="@+id/tv_category_budget_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R0.00"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toTopOf="@+id/bar_budget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="0dp" />
+
+            <View
+                android:id="@+id/bar_budget"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/accent_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="@dimen/bar_chart_max_height" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Category"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="2dp"/>
+
+</LinearLayout>

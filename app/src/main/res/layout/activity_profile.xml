@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/primary_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/profile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_header"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Progress"
+                        android:textColor="@color/text_color_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Level: 1 - Novice Budgeter"
+                        android:textColor="@color/text_color_medium"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_level"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progress="50"
+                        android:max="100"
+                        android:progressTint="@color/accent_color"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tv_progress_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5/10 transactions to next level"
+                        android:textColor="@color/text_color_medium"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Achievements"
+                        android:textColor="@color/text_color_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_achievements_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_no_achievements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No achievements unlocked yet."
+                        android:textColor="@color/text_color_medium"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textColor="@color/text_color_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:id="@+id/btn_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:backgroundTint="@color/primary_color"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:backgroundTint="@color/red_500"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_color"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_custom_home"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/analyticsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Analytics"
+            android:src="@drawable/ic_custom_graph"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/transactionsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Transactions"
+            android:src="@drawable/ic_custom_arrows"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/plansButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Plans"
+            android:src="@drawable/ic_custom_plans"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_custom_profile"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

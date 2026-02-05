@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="4dp">
+
+    <ImageView
+        android:id="@+id/iv_achievement_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_badge_locked"
+        android:contentDescription="Achievement Icon"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_achievement_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achievement Name"
+            android:textColor="@color/text_color_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_achievement_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description of the achievement"
+            android:textColor="@color/text_color_medium"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_unlocked_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlocked: 2023-01-01"
+        android:textColor="@color/text_color_medium"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone" />
+
+</LinearLayout>

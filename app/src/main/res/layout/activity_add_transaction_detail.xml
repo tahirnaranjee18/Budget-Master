@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#037276"
+        android:padding="16dp">
+
+         <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/poppins"
+        android:text="Add Transaction"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Date"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/date_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="April 30, 2024"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#757575" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Category"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_spinner_background"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:minHeight="48dp" />
+
+                 </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Amount"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/amount_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="R0.00"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="16dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Expense Title"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="Dinner"
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Enter Message"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/message_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="Optional notes..."
+                android:inputType="text"
+                android:paddingHorizontal="16dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="Add Photo"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/add_photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_button_outline"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_photo"
+                    app:tint="#757575" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Tap to add photo"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/receiptImageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                android:id="@+id/receiptImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/gray"
+                android:contentDescription="@string/receipt_image_description"
+                android:scaleType="centerCrop"
+                app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <ImageView
+                android:id="@+id/removeImageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_red_background"
+                android:contentDescription="@string/remove_image_button_description"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#59C3C3"
+                android:fontFamily="@font/poppins"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

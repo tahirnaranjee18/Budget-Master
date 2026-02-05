@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "842489052566",
+    "project_id": "budget-master-b9f5e",
+    "storage_bucket": "budget-master-b9f5e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842489052566:android:1227a67112bb472d4231b7",
+        "android_client_info": {
+          "package_name": "com.example.budgetmaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAggtIz-TEuvCeYWb8zjzvuvzfoGM3Miec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

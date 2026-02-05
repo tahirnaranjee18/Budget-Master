@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#037276"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Budgets"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/totalExpensesContainerBudgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="#037276"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Expenses (This Month)"
+            android:textSize="12sp"
+            android:textColor="#B2DFDB"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/total_expenses_budgets_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="R0.00"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overall Budget Summary"
+                        android:textSize="16sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalAllocatedBudgetTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Maximum Monthly Goal: R0.00"
+                        android:textColor="#009688"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalSpentBudgetTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Minimum Monthly Goal: R0.00"
+                        android:textColor="#F44336"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/overallBudgetProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="12dp"
+                        android:progress="0"
+                        android:progressTint="#59C3C3"
+                        android:progressBackgroundTint="#E0F2F1" />
+
+                    <TextView
+                        android:id="@+id/overallBudgetMessageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="No budgets set yet."
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/create_budget_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#59C3C3"
+                android:text="Create New Budget"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Budgets"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/noBudgetsMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You haven't created any budgets yet. Tap 'Create New Budget' to get started!"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone" /> <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/budgetsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/budget_item" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#037276"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_custom_home"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/analyticsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Analytics"
+            android:src="@drawable/ic_custom_graph"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/transactionsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Transactions"
+            android:src="@drawable/ic_custom_arrows"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/plansButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Plans"
+            android:src="@drawable/ic_custom_plans"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_custom_profile"
+            android:background="@null"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
